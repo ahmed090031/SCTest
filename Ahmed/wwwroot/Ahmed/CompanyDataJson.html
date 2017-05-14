@@ -1,0 +1,51 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+<style>
+    .wrapper {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .div {
+        height: 60px;
+        width: 33px;
+        display: table-cell;
+        color: #fff;
+        background-color: #454545;
+    }
+</style>
+<template>
+    
+    <template is="dom-bind">
+        <a href="/Ahmed"> < < Back to start</a>
+        <h3>Edit franchise settings</h3>
+        <fieldset>
+            <label>Name:</label>
+            <input value="{{model.Company$.Name$::input}}">
+        </fieldset>
+        <starcounter-include partial="{{model.Company$.Address$}}"></starcounter-include>
+        <br />
+        <button value="{{model.SaveTrigger$::click}}" onmousedown="++this.value">Save</button>
+        <br />
+        <h3>Register new Home for sale</h3>
+        <strong>Home info</strong>
+        <starcounter-include partial="{{model.Sale$.Address$}}"></starcounter-include>
+        <strong>Transaction info</strong>
+        <starcounter-include partial="{{model.Sale$.Transaction$}}"></starcounter-include>
+        <br />
+        <button value="{{model.NewSaleTrigger$::click}}" onmousedown="++this.value">Register</button>
+        <br />
+        <h3>List of transactions</h3>
+        <br />
+        <div class="wrapper">
+            <div class="div"><strong>Date</strong></div>
+            <div class="div"><strong>Sales Price</strong></div>
+            <div class="div"><strong>Commission</strong> </div>
+            <div class="div"><strong>Address</strong></div>
+        </div>
+        <template is="dom-repeat" items="{{model.Sales}}">
+            <starcounter-include partial="{{item}}"></starcounter-include>
+        </template>
+        <br />
+    </template>
+</template>

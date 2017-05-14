@@ -1,0 +1,26 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+<style>
+    .wrapper {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .div {
+        height: 60px;
+        width: 33px;
+        display: table-cell;
+        color: #fff;
+        background-color: #454545;
+    }
+</style>
+<template>
+    <template is="dom-bind">
+        <div class="wrapper">
+            <div class="div">{{model.Transaction.Date$}}</div>
+            <div class="div">{{model.Transaction.SalesPrice$}}</div>
+            <div class="div">{{model.Transaction.Commission$}}</div>
+            <div class="div">{{model.Address.Street$}} {{model.Address.Number$}} {{model.Address.Zip$}} {{model.Address.City$}} {{model.Address.Country$}}</div>
+        </div>
+    </template>
+</template>

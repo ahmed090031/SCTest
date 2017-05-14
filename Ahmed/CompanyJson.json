@@ -1,0 +1,12 @@
+{
+  "Html": "/Ahmed/CompanyJson.html",
+  "Name": "",
+  "TotalSales":0,
+  "TotalCommission":0,
+  "AverageCommission": 0,
+  "Trend": 0,
+  "Url":"",
+    "$Url":{
+      "Bind":"GetUrl"
+    }
+}

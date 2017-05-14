@@ -1,0 +1,27 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+<style>
+    .wrapper {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .div {
+        height: 60px;
+        width:33px;
+        display: table-cell;
+        color: #fff;
+        background-color: #454545;
+    }
+</style>
+<template>
+    <template is="dom-bind">
+        <div class="wrapper">
+            <div class="div"><a href="{{model.Url}}"><strong>{{model.Name}}</strong></a></div>
+            <div class="div"><strong>{{model.TotalSales}}</strong></div>
+            <div class="div"><strong>{{model.TotalCommission}}</strong></div>
+            <div class="div"><strong>{{model.AverageCommission}}</strong></div>
+            <div class="div"><strong>{{model.Trend}}</strong></div>
+         </div>
+</template>
+</template>

@@ -1,0 +1,87 @@
+﻿<head>
+    <link rel="import" href="/sys/polymer/polymer.html">
+
+    <style>
+        .wrapper {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        .div {
+            height: 60px;
+            width: 33px;
+            display: table-cell;
+            color: #fff;
+            background-color: #454545;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body onload="showCompany();">
+    <template>
+        <template is="dom-bind">
+            <h1>Welcome</h1>
+            <h2>Create Main Corporation</h2>
+            <fieldset>
+                <label>Name:</label>
+                <input value="{{model.Name$::input}}">
+            </fieldset>
+            <br />
+            <button id="createCorpBtn" value="{{model.SaveTrigger$::click}}" onclick="showCompany()" onmousedown="++this.value">Create corporation</button>
+            <h2>List of Corporations</h2>
+            <div id="companyDiv" style="display:none">
+                <hr />
+                <h2>{{model.Name$}}</h2><br />
+                <h3>Frachise Offices</h3><br />
+                <strong>Sort on</strong><br />
+                <button value="{{model.TotalSales$::click}}" onmousedown="++this.value">Number of Homes-</button>
+                <button value="{{model.TotalCommission$::click}}" onmousedown="++this.value">Total Commission-</button>
+                <button value="{{model.AverageCommission$::click}}" onmousedown="++this.value">Average Commission-</button>
+                <button value="{{model.Trend$::click}}" onmousedown="++this.value">Positive Trend</button>
+                <br />
+                <div class="wrapper">
+                    <div class="div"><strong>Name</strong></div>
+                    <div class="div"><strong>Number of homes Sold</strong></div>
+                    <div class="div"><strong>Total Commission</strong> </div>
+                    <div class="div"><strong>Average Commission</strong></div>
+                    <div class="div"><strong>Trend</strong></div>
+                </div>
+                <template is="dom-repeat" items="{{model.Companies}}">
+                    <starcounter-include partial="{{item}}"></starcounter-include>
+                </template>
+                <br />
+                <strong>New Franchise Office</strong><br />
+                <fieldset>
+                    <label>Name:</label>
+                    <input value="{{model.CompanyName$::input}}">
+                </fieldset>
+                <br />
+                <button value="{{model.NewCompanyTrigger$::click}}" onmousedown="++this.value">Create new</button>
+
+                <hr />
+            </div>
+        </template>
+    </template>
+    <script>
+        
+        $(document).ready(function () {
+            
+            if (window.name == 1) {
+                $("#companyDiv").show();
+            }
+
+        });
+
+    function showCompany() {
+        //var z = document.getElementById("createCorpBtn").value;
+        window.name = "1";
+        //if (z > 0) {
+            var x = document.getElementById('companyDiv');
+            x.style.display = 'block';
+        //}
+}
+    </script>
+    </body>

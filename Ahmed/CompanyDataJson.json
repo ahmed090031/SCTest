@@ -1,0 +1,17 @@
+{
+  "Html": "/Ahmed/CompanyDataJson.html",
+  "Company$": {
+    "Name$": "",
+    "Address$": {
+    }
+  },
+  "SaveTrigger$": 0,
+  "Sale$": {
+    "Address$": {
+    },
+    "Transaction$": {
+    }
+  },
+  "NewSaleTrigger$": 0,
+  "Sales": [{}]
+}

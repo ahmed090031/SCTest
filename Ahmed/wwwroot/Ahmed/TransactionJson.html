@@ -1,0 +1,18 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<template>
+    <template is="dom-bind">
+        <fieldset>
+            <label>Date (format: "2016-04-01")</label>
+            <input value="{{model.Date$::input}}">
+        </fieldset>
+        <fieldset>
+            <label>Sales Price:</label>
+            <input value="{{model.SalesPrice$::input}}">
+        </fieldset>
+        <fieldset>
+            <label>Commission:</label>
+            <input value="{{model.Commission$::input}}">
+        </fieldset>
+    </template>
+</template>

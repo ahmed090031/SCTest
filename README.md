@@ -1,15 +1,15 @@
 # SCTest
 star counter developer test
-Main Page: /Ahmed
-/Ahmed/agency
-/Ahmed/company/{?}", (string id)
-/Ahmed/company/data
-/Ahmed/agency
+Main Page: /Ahmed <br />
+/Ahmed/agency <br />
+/Ahmed/company/{?}", (string id) <br />
+/Ahmed/company/data <br />
+/Ahmed/agency <br />
 
-DB classes:
+DB classes: <br />
 
-Agency
-Company
-Sale
-Address
-Transaction
+Agency <br />
+Company <br />
+Sale <br />
+Address <br />
+Transaction <br />
